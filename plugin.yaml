@@ -1,0 +1,6 @@
+name: vikey
+version: 0.1.0
+description: "Vikey untuk Hermes: Memori Pintar (catatan jangka panjang di komputer kamu, Vikey memilih yang relevan untuk setiap pesan) dan Satpam (perintah berisiko minta persetujuan dulu, perintah yang merusak diblokir). Login dengan akun Vikey."
+author: "Vikey"
+hooks:
+  - pre_tool_call
