@@ -9,7 +9,15 @@ Turn each plugin on or off, and see usage and billing, at [plugins.vikey.ai](htt
 
 ## Install
 
-The quickest way (macOS and Linux) installs the plugin into every supported agent on your computer and starts the login:
+**Let Hermes install it (works on a VPS, also over Telegram).** Sign in at [plugins.vikey.ai](https://plugins.vikey.ai), click *Buat kode pasang* and copy the message. Paste it into your chat with Hermes. Hermes runs the installer with a one-time setup code, signs in without a browser, and restarts itself so the plugin is active. The code is valid for 15 minutes and works once.
+
+**From a terminal or SSH session**, with a setup code from the same page:
+
+```sh
+curl -fsSL https://plugins.vikey.ai/install.sh | sh -s -- --code VK-XXXX-XXXX-XXXX-XXXX
+```
+
+Without a code, the installer (macOS and Linux) installs the plugin into every supported agent on the machine and starts the login:
 
 ```sh
 curl -fsSL https://plugins.vikey.ai/install.sh | sh
@@ -23,7 +31,7 @@ hermes config set memory.provider vikey
 hermes vikey login
 ```
 
-`hermes vikey login` prints a link and a code. Open the link, sign in with your Vikey account and approve the code. One login covers every agent on the computer (the Vikey plugin for OpenCode uses it too).
+`hermes vikey login` prints a link and a code. Open the link on any device (your phone works, the server needs no browser), sign in with your Vikey account and approve the code. One login covers every agent on the computer (the Vikey plugin for OpenCode uses it too).
 
 On a server without a browser, use a Vikey API key instead: `export VIKEY_API_KEY=...`.
 

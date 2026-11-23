@@ -103,6 +103,7 @@ def login(print_fn=print, open_browser: bool = True) -> Tuple[bool, str]:
     print_fn("Login dengan Vikey")
     print_fn(f"  Buka: {link}")
     print_fn(f"  Kode: {start['user_code']}")
+    print_fn("  Link boleh dibuka di HP atau laptop mana saja, tidak harus di komputer ini.")
     if open_browser:
         try:
             import webbrowser
